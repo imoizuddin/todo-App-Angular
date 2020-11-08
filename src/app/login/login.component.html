@@ -1,7 +1,36 @@
-<small *ngIf='invalidLogin'>{{errorMessage}}</small>
+<div class="container">
+  <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+  <div class="row" style="margin-top: 10rem;">
+    <div class="col-sm-7">
+      <!-- User Name : <input type="text" name="username" [(ngModel)]="username">
+      Password : <input type="password" name="pass" [(ngModel)]="password">
+      <button (click)=handleLogin()>Login</button> -->
+      <img src="../../assets/undraw_accept_tasks_po1c.png" style="height: 25em;" alt="">
+    </div>
 
-<div>
-  User Name : <input type="text" name="username" [(ngModel)]="username">
-  Password  : <input type="password" name="pass" [(ngModel)]="password">
-  <button (click)=handleLogin()>Login</button>
+    <div class="col-sm-5 border rounded">
+      <div class="card-body">
+        <h1>Login!</h1>
+        <form class="form-signin">
+          <div class="form-label-group">
+            <label for="inputEmail">Email address or Username</label>
+            <input type="text" name="username" [(ngModel)]="username" class="form-control" placeholder="Email address "
+              required autofocus>
+          </div>
+          <div class="form-label-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password"
+              required [(ngModel)]="password">
+          </div>
+          <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="customCheck1">
+            <label class="custom-control-label" for="customCheck1">Remember password</label>
+          </div>
+          <button class="btn btn-lg  btn-block text-uppercase text-white" (click)=handleLogin() type="submit" style="background-color: #da2c38;">Sign
+            in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
 </div>
