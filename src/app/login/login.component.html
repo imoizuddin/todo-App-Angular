@@ -1,16 +1,18 @@
 <div class="container">
-  <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
-  <div class="row" style="margin-top: 10rem;">
-    <div class="col-sm-7">
+ 
+  <div class="row" style="margin-top: 7rem;">
+    <div class="col-md-8">
       <!-- User Name : <input type="text" name="username" [(ngModel)]="username">
       Password : <input type="password" name="pass" [(ngModel)]="password">
       <button (click)=handleLogin()>Login</button> -->
-      <img src="../../assets/undraw_accept_tasks_po1c.png" style="height: 25em;" alt="">
-    </div>
-
-    <div class="col-sm-5 border rounded">
+      <img src="../../assets/undraw_accept_tasks_po1c.png" class="col" alt="">
+      <br>
+    </div> 
+    <div class="col-md-4 border rounded">
       <div class="card-body">
         <h1>Login!</h1>
+        <br>
+        <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
         <form class="form-signin">
           <div class="form-label-group">
             <label for="inputEmail">Email address or Username</label>
@@ -26,7 +28,8 @@
             <input type="checkbox" class="custom-control-input" id="customCheck1">
             <label class="custom-control-label" for="customCheck1">Remember password</label>
           </div>
-          <button class="btn btn-lg  btn-block text-uppercase text-white" (click)=handleLogin() type="submit" style="background-color: #da2c38;">Sign
+          <button class="btn btn-lg  btn-block text-uppercase text-white" (click)=handleLogin() type="submit"
+            style="background-color: #da2c38;">Sign
             in</button>
         </form>
       </div>
